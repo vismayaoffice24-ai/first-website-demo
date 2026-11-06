@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Book an Appointment with Dr. Neelima | Nephrologist in Kannur</title>
+  <meta name="description" content="Schedule a kidney consultation with Dr. Neelima at MIMS Hospital, Chala Bypass, Kannur. Fast WhatsApp booking, OPD timings, directions, and hospital map.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="bar"></div>
+  <div id="cur" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav">
+      <a class="logo" href="index.html"><i></i>Dr. Neelima</a>
+      <nav class="links" id="links" aria-label="Main Navigation">
+        <a data-n="home" href="index.html">Home</a>
+        <a data-n="about" href="about.html">About</a>
+        <a data-n="services" href="services.html">Services</a>
+        <a data-n="conditions" href="conditions.html">Conditions</a>
+        <a data-n="faq" href="reviews-faq.html">Reviews &amp; FAQ</a>
+        <a data-n="blog" href="blog.html">Blog</a>
+        <a data-n="contact" href="contact.html">Contact</a>
+        <a class="btn" href="appointment.html">Book Appointment</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero ice">
+      <div class="w">
+        <div class="sh rv">
+          <h2>Book an Appointment</h2>
+          <p>Fill in your details below. Once submitted, WhatsApp will open with your pre-formatted appointment request ready to send to Dr. Neelima's consultation desk at MIMS Hospital, Kannur.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:36px;align-items:start;">
+          <!-- Appointment Form & Success Card Container -->
+          <div>
+            <form class="form rv" id="appointment-form" novalidate>
+              <label>
+                Patient Full Name *
+                <input name="n" required autocomplete="name" placeholder="e.g. Rahul Nambiar">
+              </label>
+
+              <label>
+                Mobile Number *
+                <input name="m" required inputmode="tel" autocomplete="tel" placeholder="e.g. 9876543210">
+              </label>
+
+              <label>
+                Email Address
+                <input name="e" type="email" autocomplete="email" placeholder="e.g. rahul@example.com">
+              </label>
+
+              <label>
+                Preferred Consultation Date *
+                <input name="d" type="date" required>
+              </label>
+
+              <label>
+                Preferred Time Window
+                <input name="t" type="time">
+              </label>
+
+              <label>
+                Visit Type
+                <select name="v">
+                  <option value="In-person consultation">In-person consultation (MIMS Hospital)</option>
+                  <option value="Follow-up visit">Follow-up visit</option>
+                  <option value="Report review">Lab Report Review</option>
+                  <option value="Online consultation">Online consultation</option>
+                </select>
+              </label>
+
+              <label class="full">
+                Reason for Visit / Main Symptoms
+                <textarea name="r" rows="3" placeholder="Briefly describe your symptoms or reason for visit (e.g. high creatinine, kidney stone pain, diabetes check-up)..."></textarea>
+              </label>
+
+              <div class="full">
+                <button class="btn btn-g" type="submit" style="width:100%;justify-content:center;font-size:1.05rem;padding:15px 28px;">
+                  Send Appointment Request via WhatsApp
+                </button>
+                <p class="small consent-line" style="margin-top:14px;color:var(--mute);">
+                  By submitting, you agree to send these details to the clinic desk on WhatsApp. Your information is used strictly to arrange your consultation. Learn more in our <a href="privacy-policy.html" style="color:var(--aqt);font-weight:600;text-decoration:underline;">Privacy Policy</a>.
+                </p>
+                <p id="st" role="status" style="margin-top:10px;font-weight:700;"></p>
+              </div>
+            </form>
+
+            <!-- Success State Card (displayed after form submission) -->
+            <div id="appointment-success" class="tile in" style="display:none;padding:34px;border-radius:28px;" role="region" aria-live="polite">
+              <div style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:rgba(34,193,195,0.12);color:var(--aqt);margin-bottom:18px;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h3 style="font-size:1.35rem;margin-bottom:10px;color:var(--ink);">Appointment Request Received</h3>
+              <p id="success-intro" style="color:var(--mute);font-size:1rem;line-height:1.6;margin-bottom:22px;">
+                Thank you, <strong id="success-name" style="color:var(--ink);"></strong>. Your appointment request has been sent to Dr. Neelima's clinic. <span id="success-email-line"></span>
+              </p>
+
+              <div style="background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:22px;">
+                <h4 style="font-size:0.86rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--aqt);margin:0 0 14px 0;">Consultation Details</h4>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;font-size:0.92rem;">
+                  <div><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Name</span><strong id="detail-name" style="color:var(--ink);"></strong></div>
+                  <div><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Mobile</span><strong id="detail-mobile" style="color:var(--ink);"></strong></div>
+                  <div><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Email</span><strong id="detail-email" style="color:var(--ink);"></strong></div>
+                  <div><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Preferred Date</span><strong id="detail-date" style="color:var(--ink);"></strong></div>
+                  <div><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Preferred Time</span><strong id="detail-time" style="color:var(--ink);"></strong></div>
+                  <div><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Visit Type</span><strong id="detail-visittype" style="color:var(--ink);"></strong></div>
+                  <div style="grid-column:1 / -1;"><span style="color:var(--mute);display:block;font-size:0.8rem;margin-bottom:2px;">Reason for Visit</span><strong id="detail-reason" style="color:var(--ink);"></strong></div>
+                </div>
+              </div>
+
+              <div id="email-note" style="display:none;margin-bottom:20px;padding:12px 16px;border-radius:12px;background:rgba(34,193,195,0.08);border:1px solid rgba(34,193,195,0.25);color:var(--ink);font-size:0.88rem;line-height:1.5;"></div>
+
+              <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+                <a id="success-wa-btn" target="_blank" rel="noopener noreferrer" class="btn btn-g" style="padding:12px 22px;">
+                  Open WhatsApp Chat
+                </a>
+                <button type="button" id="btn-book-another" class="btn btn-d" style="padding:12px 20px;">
+                  Book Another Appointment
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clinic Hours & Hospital Location Details -->
+          <div class="rv">
+            <div class="tile dk" style="margin-bottom:20px;">
+              <h3 style="color:#fff;margin-bottom:12px;">OPD Timings</h3>
+              <p style="color:#bfc6ea;margin-bottom:6px;"><strong>Monday to Saturday:</strong><br>9:00 AM to 4:00 PM</p>
+              <p style="color:#bfc6ea;margin-bottom:14px;"><strong>Sunday:</strong><br>9:00 AM to 5:30 PM</p>
+              <p class="small" style="color:#d6dbf5;">For emergency kidney conditions (severe AKI, acute stone obstruction), please contact the MIMS Hospital 24/7 emergency department directly.</p>
+            </div>
+
+            <div class="tile" style="margin-bottom:20px;">
+              <h3 style="margin-bottom:10px;">Direct Clinic Contact</h3>
+              <p style="margin-bottom:6px;"><strong>Phone:</strong> <a data-tel data-c="phone" href="tel:+917306003583" style="color:var(--aqt);font-weight:700;">+91 7306003583</a></p>
+              <p style="margin-bottom:6px;"><strong>WhatsApp:</strong> <a data-wa href="https://wa.me/919037822668" style="color:var(--aqt);font-weight:700;">+91 9037822668</a></p>
+              <p style="margin-bottom:14px;"><strong>Email:</strong> <a data-mail data-c="email" href="mailto:drneelima@gmail.com" style="color:var(--aqt);font-weight:700;">drneelima@gmail.com</a></p>
+              <a class="btn btn-d btn-directions" id="dir" target="_blank" rel="noopener noreferrer" style="width:100%;justify-content:center;">Get Directions to Hospital</a>
+            </div>
+
+            <div class="tile">
+              <h3 style="margin-bottom:8px;">What to Bring</h3>
+              <ul style="padding-left:18px;color:var(--mute);font-size:0.92rem;line-height:1.6;">
+                <li>Previous blood &amp; urine reports (creatinine, urea, eGFR, urine protein).</li>
+                <li>Recent abdominal/KUB ultrasound or CT scan films.</li>
+                <li>List of current daily medications and dosages.</li>
+                <li>Discharge summaries from any recent hospitalizations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embedded Google Map -->
+        <div class="rv" style="margin-top:48px;">
+          <div class="sh">
+            <h2>Location &amp; Hospital Map</h2>
+            <p>MIMS Hospital is conveniently situated on the Chala Bypass in Kannur with ample patient parking and full laboratory support.</p>
+          </div>
+          <div class="map-container" style="border-radius:24px;overflow:hidden;border:1.5px solid var(--line);box-shadow:0 12px 34px rgba(20,18,58,0.08);">
+            <iframe
+              src="https://www.google.com/maps?q=MIMS+Hospital+Chala+Bypass+Kannur+Kerala+670621&output=embed"
+              width="100%"
+              height="380"
+              style="border:0;display:block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="MIMS Hospital, Chala Bypass, Kannur, Kerala - Google Map">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Dr. Neelima</h3>
+          <p class="footer-subtitle">Nephrologist / Kidney Specialist</p>
+          <p class="footer-info"><strong>Hospital:</strong> <span data-c="hospital">MIMS Hospital</span></p>
+          <p class="footer-info"><strong>Address:</strong> <span data-c="address">Chala East, Chala Bypass, Kannur, Kerala 670621, India</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact &amp; Timings</h4>
+          <p class="footer-info"><strong>Phone:</strong> <a data-tel data-c="phone" href="tel:+917306003583">+91 7306003583</a></p>
+          <p class="footer-info"><strong>WhatsApp:</strong> <a data-wa href="https://wa.me/919037822668">+91 9037822668</a></p>
+          <p class="footer-info"><strong>Email:</strong> <a data-mail data-c="email" href="mailto:drneelima@gmail.com">drneelima@gmail.com</a></p>
+          <p class="footer-info" style="margin-top:10px;"><strong>OPD Timings:</strong><br><span data-c="timings">Monday to Saturday: 9:00 AM to 4:00 PM; Sunday: 9:00 AM to 5:30 PM</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Dr. Neelima</a></li>
+            <li><a href="services.html">Kidney Care Services</a></li>
+            <li><a href="conditions.html">Treated Conditions</a></li>
+            <li><a href="reviews-faq.html">Reviews &amp; FAQ</a></li>
+            <li><a href="blog.html">Kidney Health Blog</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Visit Clinic &amp; Map</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        <p class="small disclaimer"><strong>Medical Disclaimer:</strong> This website is for general educational and informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Please consult Dr. Neelima or a qualified healthcare provider regarding any personal health concerns.</p>
+        <p class="small copyright">&copy; 2026 Dr. Neelima. All rights reserved. <a href="privacy-policy.html" style="text-decoration:underline;">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Trigger -->
+  <a class="wa" id="wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Dr. Neelima's clinic on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.8 1 1-3.7-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.3 1.3 0 0 0-.9.4 3.8 3.8 0 0 0-1.2 2.8 6.6 6.6 0 0 0 1.4 3.5 15 15 0 0 0 5.8 5.1c2.1.9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.6 2.7 2.7 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

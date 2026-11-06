@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dr. Neelima | Nephrologist &amp; Kidney Specialist in Kannur</title>
+  <meta name="description" content="Dr. Neelima is an experienced Nephrologist &amp; Kidney Specialist at MIMS Hospital, Chala, Kannur, Kerala. Comprehensive kidney care, dialysis, CKD, and blood pressure management.">
+  <meta name="keywords" content="Dr. Neelima, Nephrologist Kannur, Kidney Specialist Kannur, MIMS Hospital Kannur, dialysis care Kannur, CKD treatment Kerala">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Physician Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Neelima",
+    "medicalSpecialty": "Nephrology",
+    "jobTitle": "Nephrologist / Kidney Specialist",
+    "description": "Dr. Neelima is a highly respected Nephrologist and Kidney Specialist at MIMS Hospital, Chala Bypass, Kannur, Kerala, providing attentive and evidence-based kidney care.",
+    "image": "images/doctor.png",
+    "telephone": "+917306003583",
+    "email": "drneelima@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Chala East, Chala Bypass",
+      "addressLocality": "Kannur",
+      "addressRegion": "Kerala",
+      "postalCode": "670621",
+      "addressCountry": "IN"
+    },
+    "hospitalAffiliation": {
+      "@type": "Hospital",
+      "name": "MIMS Hospital",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chala East, Chala Bypass",
+        "addressLocality": "Kannur",
+        "addressRegion": "Kerala",
+        "postalCode": "670621",
+        "addressCountry": "IN"
+      }
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "17:30"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Full-Screen Brand Intro Animation Overlay (plays once per session) -->
+  <div id="intro" class="intro-overlay" aria-hidden="true">
+    <div class="intro-aurora" aria-hidden="true"></div>
+    <div class="intro-card">
+      <div class="intro-mark-wrap">
+        <svg class="intro-mark" viewBox="0 0 100 100" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="introGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22C1C3" stop-opacity="0.32"/>
+              <stop offset="100%" stop-color="#6D5BFF" stop-opacity="0.10"/>
+            </linearGradient>
+            <linearGradient id="introStrokeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22C1C3"/>
+              <stop offset="100%" stop-color="#5EEAD4"/>
+            </linearGradient>
+          </defs>
+          <path class="intro-path-body" pathLength="100"
+            d="M 50 15 C 68 15, 82 28, 82 50 C 82 70, 70 85, 52 85 C 38 85, 30 74, 34 60 C 37 53, 42 51, 42 46 C 42 41, 35 37, 34 30 C 32 21, 39 15, 50 15 Z"
+            stroke="url(#introStrokeGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+          <path class="intro-path-inner" pathLength="100"
+            d="M 46 36 C 40 42, 40 50, 46 56"
+            stroke="#22C1C3" stroke-width="2" stroke-linecap="round" />
+          <circle class="intro-dot" cx="48" cy="46" r="2.5" fill="#22C1C3"/>
+        </svg>
+      </div>
+      <h2 class="intro-title" aria-label="Dr. Neelima">
+        <span class="intro-word"><span class="intro-char" style="animation-delay:0.60s">D</span><span class="intro-char" style="animation-delay:0.63s">r</span><span class="intro-char" style="animation-delay:0.66s">.</span></span>
+        <span class="intro-space">&nbsp;</span>
+        <span class="intro-word"><span class="intro-char" style="animation-delay:0.73s">N</span><span class="intro-char" style="animation-delay:0.76s">e</span><span class="intro-char" style="animation-delay:0.79s">e</span><span class="intro-char" style="animation-delay:0.82s">l</span><span class="intro-char" style="animation-delay:0.85s">i</span><span class="intro-char" style="animation-delay:0.88s">m</span><span class="intro-char" style="animation-delay:0.91s">a</span></span>
+      </h2>
+      <p class="intro-subtitle">Nephrologist &amp; Kidney Specialist &middot; MIMS Hospital, Kannur</p>
+      <div class="intro-progress-track">
+        <div class="intro-progress-bar"></div>
+      </div>
+    </div>
+    <button type="button" class="intro-skip" id="intro-skip" aria-label="Skip introduction">
+      Skip <span aria-hidden="true">&rarr;</span>
+    </button>
+  </div>
+  <script>
+    /* Immediate synchronous guard: if already seen in session or reduced-motion is requested, remove immediately before first paint */
+    (function () {
+      try {
+        if (sessionStorage.getItem("neelima_intro_seen") === "1" || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+          var el = document.getElementById("intro");
+          if (el && el.parentNode) el.parentNode.removeChild(el);
+        } else {
+          document.body.classList.add("intro-active", "intro-locked");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <div id="bar"></div>
+  <div id="cur" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav">
+      <a class="logo" href="index.html"><i></i>Dr. Neelima</a>
+      <nav class="links" id="links" aria-label="Main Navigation">
+        <a data-n="home" href="index.html">Home</a>
+        <a data-n="about" href="about.html">About</a>
+        <a data-n="services" href="services.html">Services</a>
+        <a data-n="conditions" href="conditions.html">Conditions</a>
+        <a data-n="faq" href="reviews-faq.html">Reviews &amp; FAQ</a>
+        <a data-n="blog" href="blog.html">Blog</a>
+        <a data-n="contact" href="contact.html">Contact</a>
+        <a class="btn" href="appointment.html">Book Appointment</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="au a1"></div>
+      <div class="au a2"></div>
+      <div class="au a3"></div>
+      <div class="w hg">
+        <div>
+          <span class="pill"><b></b>Nephrologist / Kidney Specialist</span>
+          <h1 id="h1">Kidney care that takes time to listen</h1>
+          <p class="lead">Dr. Neelima treats kidney conditions at MIMS Hospital, Kannur. Bring your reports and your questions, and leave with a clear plan.</p>
+          <div class="cta">
+            <a class="btn btn-g" href="appointment.html">Book Appointment</a>
+            <a class="btn btn-o" data-tel href="tel:+917306003583">Call Now</a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="orbit" aria-hidden="true">
+            <div class="oc" style="top:0;left:50%"><div>MBBS &middot; MD &middot; DM</div></div>
+            <div class="oc" style="top:75%;left:93.3%"><div>14 years of experience</div></div>
+            <div class="oc" style="top:75%;left:6.7%"><div>MIMS Hospital, Kannur</div></div>
+          </div>
+          <img src="images/doctor.png" alt="Dr. Neelima, Nephrologist &amp; Kidney Specialist at MIMS Hospital Kannur" width="560" height="700">
+        </div>
+      </div>
+    </section>
+
+    <!-- At a Glance Bento Grid -->
+    <section>
+      <div class="w">
+        <div class="sh rv">
+          <h2>At a glance</h2>
+          <p>Key credentials and consultation hours for kidney care in Kannur.</p>
+        </div>
+        <div class="bento">
+          <div class="tile dk t2 t2r rv tilt">
+            <h3>Qualifications</h3>
+            <p>The training behind your care.</p>
+            <div class="big" style="margin-top:22px;font-size:clamp(1.8rem,3.4vw,2.6rem)">
+              MBBS<br>
+              MD (General Medicine)<br>
+              DM (Nephrology)
+            </div>
+          </div>
+          <div class="tile aqb rv tilt">
+            <div class="big"><span id="cnt" data-to="14">0</span></div>
+            <p style="margin-top:8px;font-weight:700">years of experience</p>
+          </div>
+          <div class="tile rv tilt">
+            <h3>OPD timings</h3>
+            <p data-c="t1">Monday to Saturday: 9:00 AM to 4:00 PM</p>
+            <p data-c="t2">Sunday: 9:00 AM to 5:30 PM</p>
+          </div>
+          <div class="tile t2 rv tilt">
+            <h3>Registered with</h3>
+            <p>Kerala State Medical Council (KSMC)</p>
+            <h3 style="margin-top:14px">Memberships</h3>
+            <p>ASN, ISOT, ISNSC</p>
+          </div>
+          <div class="tile dk t2 rv tilt" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+            <div>
+              <h3>Book your visit</h3>
+              <p>Send your appointment request directly on WhatsApp.</p>
+            </div>
+            <a class="btn btn-g" href="appointment.html">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinical Services Preview -->
+    <section class="ice">
+      <div class="w">
+        <div class="sh rv">
+          <h2>Services</h2>
+          <p>Focused clinical services for preventive, acute, and chronic kidney conditions in Kannur.</p>
+        </div>
+        <div class="sc">
+          <a class="sv" href="service-kidney-function-evaluation.html">
+            <h3>Kidney Function Evaluation</h3>
+            <p>A clear picture of how well your kidneys are working through blood, urine, and imaging assessments.</p>
+            <em>Read details &rarr;</em>
+          </a>
+          <a class="sv" href="service-dialysis-care.html">
+            <h3>Dialysis Care</h3>
+            <p>Guidance, prescription, and compassionate follow-up for patients undergoing hemodialysis or peritoneal dialysis.</p>
+            <em>Read details &rarr;</em>
+          </a>
+          <a class="sv" href="service-kidney-disease-management.html">
+            <h3>Kidney Disease Management</h3>
+            <p>A steady, structured medical plan to slow down progression and protect residual kidney function over time.</p>
+            <em>Read details &rarr;</em>
+          </a>
+          <a class="sv" href="service-kidney-transplant-follow-up.html">
+            <h3>Kidney Transplant Follow-up</h3>
+            <p>Regular post-transplant monitoring, immunosuppressant management, and infection prevention guidance.</p>
+            <em>Read details &rarr;</em>
+          </a>
+          <a class="sv" href="service-blood-pressure-management.html">
+            <h3>Blood Pressure Management</h3>
+            <p>Specialized blood pressure care designed specifically to preserve renal blood vessels and delicate filters.</p>
+            <em>Read details &rarr;</em>
+          </a>
+          <a class="sv" href="service-preventive-kidney-care.html">
+            <h3>Preventive Kidney Care</h3>
+            <p>Early screening and personalized lifestyle counseling for individuals at risk of renal decline.</p>
+            <em>Read details &rarr;</em>
+          </a>
+        </div>
+        <div style="margin-top:24px;text-align:center;">
+          <a class="btn btn-d" href="services.html">View All Services &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treated Conditions Preview -->
+    <section>
+      <div class="w">
+        <div class="sh rv">
+          <h2>Conditions treated</h2>
+          <p>Click any condition to learn about symptoms, diagnostic tests, and personalized management plans.</p>
+        </div>
+        <div class="cloud">
+          <a class="pl rv" href="condition-chronic-kidney-disease.html">Chronic Kidney Disease (CKD)</a>
+          <a class="pl rv" href="condition-acute-kidney-injury.html">Acute Kidney Injury (AKI)</a>
+          <a class="pl rv" href="condition-kidney-stones.html">Kidney Stones</a>
+          <a class="pl rv" href="condition-diabetic-kidney-disease.html">Diabetic Kidney Disease</a>
+          <a class="pl rv" href="condition-high-blood-pressure-and-kidney-problems.html">High Blood Pressure &amp; Kidney Problems</a>
+          <a class="pl rv" href="condition-glomerular-diseases.html">Glomerular Diseases</a>
+          <a class="pl rv" href="condition-kidney-transplant-care.html">Kidney Transplant Care</a>
+        </div>
+        <div style="margin-top:32px;">
+          <a class="btn btn-d" href="conditions.html">Explore All Conditions &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Dr. Neelima Preview -->
+    <section class="ice">
+      <div class="w about">
+        <div class="rv">
+          <img class="pic" src="images/doctor.png" alt="Dr. Neelima, Nephrologist in Kannur" width="560" height="700">
+        </div>
+        <div>
+          <div class="sh rv">
+            <h2>Meet Dr. Neelima</h2>
+            <p>Dr. Neelima is a Nephrologist / Kidney Specialist with 14 years of clinical experience, dedicated to providing compassionate, transparent, and patient-centered kidney care in Kannur.</p>
+          </div>
+          <div class="ab rv">
+            <div class="fact">
+              <h3>Qualifications</h3>
+              <p>MBBS, MD (General Medicine), DM (Nephrology)</p>
+            </div>
+            <div class="fact">
+              <h3>Experience</h3>
+              <p>14 years</p>
+            </div>
+            <div class="fact">
+              <h3>Hospital</h3>
+              <p>MIMS Hospital, Chala Bypass, Kannur</p>
+            </div>
+            <div class="fact">
+              <h3>Previously at</h3>
+              <p>Amrutha Hospital, Kochi; Vinsta Clinic, Kannur</p>
+            </div>
+            <div class="fact wide">
+              <h3>Registration &amp; Memberships</h3>
+              <p>Registered with Kerala State Medical Council (KSMC) &middot; ASN, ISOT, ISNSC</p>
+            </div>
+            <div class="fact wide">
+              <h3>Achievements</h3>
+              <p>University Rank Holder; Gold Medal in MBBS / MD / DM; Academic Excellence Awards</p>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <a class="btn btn-g" href="about.html">Read Full Background &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient Education & Blog Preview -->
+    <section>
+      <div class="w">
+        <div class="sh rv">
+          <h2>Kidney health articles</h2>
+          <p>Practical, easy-to-understand guides written to help patients and families safeguard their kidney health.</p>
+        </div>
+        <div class="blog-grid rv">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="400" height="240" fill="#14123A"/>
+                <circle cx="200" cy="120" r="70" fill="#22C1C3" opacity="0.25"/>
+                <path d="M170,120 C170,90 200,80 215,95 C230,110 230,140 215,155 C200,170 170,150 170,120 Z" fill="#22C1C3" opacity="0.8"/>
+                <path d="M190,120 Q195,110 205,115" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+                <text x="200" y="210" text-anchor="middle" fill="#EEF6FB" font-family="Sora, sans-serif" font-size="14" font-weight="600">Early Signs &amp; Warning Signals</text>
+              </svg>
+            </div>
+            <div class="blog-content">
+              <span class="blog-tag">Early Detection</span>
+              <h3><a href="blog-early-signs-of-kidney-disease.html">Early Signs of Kidney Disease You Shouldn't Ignore</a></h3>
+              <p>Kidney damage often develops silently. Discover the subtle signs like swelling, fatigue, and urine changes that warrant testing.</p>
+              <a class="blog-readmore" href="blog-early-signs-of-kidney-disease.html">Read article &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-cover">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="400" height="240" fill="#14123A"/>
+                <circle cx="200" cy="120" r="70" fill="#22C1C3" opacity="0.25"/>
+                <path d="M200,75 L220,115 L265,120 L230,150 L240,195 L200,170 L160,195 L170,150 L135,120 L180,115 Z" fill="#22C1C3" opacity="0.7"/>
+                <text x="200" y="210" text-anchor="middle" fill="#EEF6FB" font-family="Sora, sans-serif" font-size="14" font-weight="600">Daily Prevention Tips</text>
+              </svg>
+            </div>
+            <div class="blog-content">
+              <span class="blog-tag">Prevention</span>
+              <h3><a href="blog-keeping-kidneys-healthy.html">Daily Habits for Keeping Your Kidneys Healthy</a></h3>
+              <p>Simple, actionable lifestyle choices&mdash;from proper hydration to mindful painkiller use&mdash;that protect your renal filters every day.</p>
+              <a class="blog-readmore" href="blog-keeping-kidneys-healthy.html">Read article &rarr;</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-cover">
+              <svg viewBox="0 0 400 240" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="400" height="240" fill="#14123A"/>
+                <circle cx="200" cy="120" r="70" fill="#22C1C3" opacity="0.25"/>
+                <rect x="155" y="90" width="90" height="60" rx="12" fill="#22C1C3" opacity="0.8"/>
+                <text x="200" y="128" text-anchor="middle" fill="#0E1330" font-family="Sora, sans-serif" font-size="20" font-weight="700">mg/dL</text>
+                <text x="200" y="210" text-anchor="middle" fill="#EEF6FB" font-family="Sora, sans-serif" font-size="14" font-weight="600">Blood Sugar &amp; Kidneys</text>
+              </svg>
+            </div>
+            <div class="blog-content">
+              <span class="blog-tag">Diabetes &amp; Health</span>
+              <h3><a href="blog-diabetes-and-kidney-health.html">Understanding Diabetes &amp; Your Kidney Health</a></h3>
+              <p>How chronic elevated blood sugar impacts nephrons, why microalbuminuria tests matter, and how proactive care prevents complications.</p>
+              <a class="blog-readmore" href="blog-diabetes-and-kidney-health.html">Read article &rarr;</a>
+            </div>
+          </article>
+        </div>
+        <div style="margin-top:28px;text-align:center;">
+          <a class="btn btn-d" href="blog.html">Browse All 6 Health Guides &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit & Directions CTA Banner -->
+    <section class="ice">
+      <div class="w">
+        <div class="note rv" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div>
+            <h3>Consult with Dr. Neelima at MIMS Hospital</h3>
+            <p>Located conveniently along the Chala Bypass in Kannur, Kerala. In-person OPD and WhatsApp appointment scheduling available.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="btn btn-g" href="appointment.html">Book Appointment</a>
+            <a class="btn btn-d" id="dir" target="_blank" rel="noopener noreferrer">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="w">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Dr. Neelima</h3>
+          <p class="footer-subtitle">Nephrologist / Kidney Specialist</p>
+          <p class="footer-info"><strong>Hospital:</strong> <span data-c="hospital">MIMS Hospital</span></p>
+          <p class="footer-info"><strong>Address:</strong> <span data-c="address">Chala East, Chala Bypass, Kannur, Kerala 670621, India</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact &amp; Timings</h4>
+          <p class="footer-info"><strong>Phone:</strong> <a data-tel data-c="phone" href="tel:+917306003583">+91 7306003583</a></p>
+          <p class="footer-info"><strong>WhatsApp:</strong> <a data-wa href="https://wa.me/919037822668">+91 9037822668</a></p>
+          <p class="footer-info"><strong>Email:</strong> <a data-mail data-c="email" href="mailto:drneelima@gmail.com">drneelima@gmail.com</a></p>
+          <p class="footer-info" style="margin-top:10px;"><strong>OPD Timings:</strong><br><span data-c="timings">Monday to Saturday: 9:00 AM to 4:00 PM; Sunday: 9:00 AM to 5:30 PM</span></p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Dr. Neelima</a></li>
+            <li><a href="services.html">Kidney Care Services</a></li>
+            <li><a href="conditions.html">Treated Conditions</a></li>
+            <li><a href="reviews-faq.html">Reviews &amp; FAQ</a></li>
+            <li><a href="blog.html">Kidney Health Blog</a></li>
+            <li><a href="appointment.html">Book Appointment</a></li>
+            <li><a href="contact.html">Visit Clinic &amp; Map</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        <p class="small disclaimer"><strong>Medical Disclaimer:</strong> This website is for general educational and informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Please consult Dr. Neelima or a qualified healthcare provider regarding any personal health concerns.</p>
+        <p class="small copyright">&copy; 2026 Dr. Neelima. All rights reserved. <a href="privacy-policy.html" style="text-decoration:underline;">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Trigger -->
+  <a class="wa" id="wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with Dr. Neelima's clinic on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.8 1 1-3.7-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.8 8.8 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.3 1.3 0 0 0-.9.4 3.8 3.8 0 0 0-1.2 2.8 6.6 6.6 0 0 0 1.4 3.5 15 15 0 0 0 5.8 5.1c2.1.9 2.9 1 3.9.8a3.3 3.3 0 0 0 2.2-1.6 2.7 2.7 0 0 0 .2-1.6c-.1-.2-.3-.3-.6-.4z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
